@@ -1,0 +1,52 @@
+方法:
+	o2d.moveTo(x,y) 移动到
+	o2d.lineTo(x,y) 连线到			路径
+	o2d.closePath() 闭合路径		路径
+	o2d.stroke()	描边            图形
+	o2d.beginPath();开启新路径      
+	o2d.rect(x,y,w,h)  矩形  路径
+	画笔.arc(cx,cy,r,start,end)  路径  需要描边、填充
+	gd.strokeText('文字',x,y);	 图形
+	d.measureText('文字本身').width   文字长度
+
+	gd.save();	保存当前画笔状态
+	gd.restore();	回复保存的画笔状态
+
+属性:
+	o2d.strokeStyle='#fff/rgba(0,0,0,0)/rgb(0,0,0)';  描边颜色
+	o2d.lineWidth=10 线条粗细
+	gd.font='字体大小 字体';
+绘制流程:
+	配置画笔:描边、填充颜色,端点、连接、投影...
+
+	gd.save() | gd.beginPath
+	画:移动到、连线到、路径、图形(矩形，弧)
+	gd.closePath 闭合路径|gd.restore()
+	
+	描边、填充
+---------------------------------------------------------------
+
+OOP：面向对象
+		资源加载: loadImage(arr,success,progress)
+		大思想： 绘制，统一绘制（业务层有一个定时器）
+		鱼:
+			Fish  类
+			属性: x y rotate speed
+			方法：draw move
+				draw:  gd.save() -> . translate_ roate_gd.drawImage.. -> gd.restore()
+
+			实例化：  f=new Fish(5)  -> f.x/y/rotate  f.draw()  f.move
+		炮筒:
+		炮弹:
+		网:
+		金币:
+---------------------------------------------------------------
+作业：
+	优化：只有统一绘制里面一个定时器
+	es6的改装:
+	记分系统完善:
+		积分类，管卡设置(选作)
+	gulp/grunt  大个包 
+---------------------------------------------------------------
+
+
